@@ -47,7 +47,9 @@ export default class Game extends Phaser.State {
 				});
 				break;
 			case 3:
-				this.game.animations.fade.fadeFlash(this.game, this.logo);
+				this.game.animations.fade.fadeFlash(this.game, this.logo, false, () => {
+					this.animationRunning = false;
+				});
 				break;
 			case 4:
 				this.game.animations.inFromTop.bounce(this.game, this.logo, false, () => {

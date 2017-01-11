@@ -104,7 +104,7 @@ var Animations = (function () {
     Animations.prototype.fadeIn = function (game, obj, data, callback) {
         if (callback === void 0) { callback = null; }
         var deflt = {
-            duration: 200
+            duration: 1000
         };
         data = this.validate(deflt, data);
         var tween1 = game.add.tween(obj).to({
@@ -138,8 +138,8 @@ var Animations = (function () {
     Animations.prototype.fadeInDown = function (game, obj, data, callback) {
         if (callback === void 0) { callback = null; }
         var deflt = {
-            duration: 200,
-            distance: 30
+            duration: 1000,
+            distance: 350
         };
         data = this.validate(deflt, data);
         obj['y'] = obj['y'] - data['distance'];
